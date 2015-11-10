@@ -9,6 +9,7 @@
     "name": "Rosetta Lextone",
     "url": "https://github.com/rosettalextone/rosettalextone/blob/master/AUTHORS.txt"
   },
+  "repository": "rosettalextone/rosettalextone",
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
