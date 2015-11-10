@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Convert ancient text files with markup for Lexicon text editor to modern, nice and crispy HTML files.",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --recursive"
+    "test": "gulp"
   },
   "author": {
     "name": "Rosetta Lextone",
