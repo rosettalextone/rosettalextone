@@ -1,8 +1,6 @@
 language: node_js
-before_install:
-  - curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
-  - export PATH=/usr/local/bin:$PATH
+node_js:
+  - "4.1"
 before_script:
   - npm i -g gulp
   - npm i -g babel-cli
