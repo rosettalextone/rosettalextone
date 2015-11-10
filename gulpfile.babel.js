@@ -11,5 +11,5 @@ const dirs = {
 gulp.task('default', () => {
   return gulp.src(`${dirs.test}/*.js`)
     .pipe(babel())
-    .pipe(mocha());
+    .pipe(mocha())
 });
