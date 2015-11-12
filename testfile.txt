@@ -1,0 +1,62 @@
+
+qwertyuiopasdfghjklzxcvbnm
+QWERTYUIOPASDFGHJKLZXCVBNM
+!@#$%^&*()_+-={}[]:;"'\|/?.>,<`~
+©æãª¥­£èé§åêäë¢ ¯à®«¤¦íïçá¬¨âì¡îñ
+‰–“Š…ƒ˜™‡•š”›‚€Ž‹„†Ÿ—‘Œˆ’œžð
+!"ü;%:?*()_+-=/\,.
+
+A B G D E Z H Q I K L M N X O P R S T Y F C J W
+ÿ7A B G D E Z H Q I K L M N X O P R S T Y F C J W
+a b g d e z h q i k l m n x o p r s t y f c j w
+ÿ7a b g d e z h q i k l m n x o p r s t y f c j w
+---------------------
+u U v V
+ÿ7u U v V
+---------------------
+1 2 3 4 5 6 7 8 9 0
+ÿ71 2 3 4 5 6 7 8 9 0
+! @ # $ % ^ & * ( ) _ + - = { } [ ] : ; " ' \ | / ? . > , < ` ~
+ÿ7! @ # $ % ^ & * ( ) _ + - = { } [ ] : ; " ' \ | / ? . > , < ` ~
+---------------------
+¥ å ê ä ¢   ¯ « ¤ í ç á ¬ ¨ â ì
+ÿ7¥ å ê ä ¢   ¯ « ¤ í ç á ¬ ¨ â ì
+… • š ” ‚ €  ‹ „  ‘ Œ ˆ ’ œ  ž
+ÿ7… • š ” ‚ €  ‹ „  ‘ Œ ˆ ’ œ  ž
+---------------------
+Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ  ß
+---------------------
+° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À 
+ÿ7° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À 
+---------------------
+ò ó ô õ ö ÷ ø ù ú û ü ý þ
+---------------------
+ÿ2° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ  ß
+ÿ3° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ  ß
+ÿ4° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ  ß
+----------------------
+Sample:
+* Bold
+ÿ2Sample line
+* Italic
+ÿ1Sample line
+* Hightlight
+ÿ_Sample line
+* Underline
+ÿ4Sample line
+* Upperline
+ÿ5Sample line
+----------------------
+Test strings
+ÿ2Boldÿ1Italicÿ_Hightlineÿ4Underlineÿ5Upperline
+ÿ2Boldÿ1Italicÿ_Hightlineÿ.ÿ4Underlineÿ5Upperline
+ÿ_Hightlineÿ.ÿ2Boldÿ1Italicÿ4Underlineÿ5Upperline
+ÿ_Hightlineÿ2Boldÿ1Italicÿ4Underlineÿ5Upperline
+
+ÿ_Hightlineÿ2Boldÿ1Italicÿ4Underlineÿ5Upperlineÿ0Sample line
+ÿ2Boldÿ0Sample line
+----------------------
+A B G D E Z H Q I K L M N X O P R S T Y F C J W
+ÿÍA B G D E Z H Q I K L M N X O P R S T Y F C J W
+a b g d e z h q i k l m n x o p r s t y f c j w
+ÿÍa b g d e z h q i k l m n x o p r s t y f c j w
