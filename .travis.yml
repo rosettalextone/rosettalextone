@@ -1,3 +1,10 @@
+branches:
+ only:
+  - master
+  - develop
+  - release
+  - /feature\/[a-zA-Z0-9-_]+/
+  - /hotfix\/[a-zA-Z0-9-_]+/
 language: node_js
 node_js:
   - "4.1"
