@@ -3,7 +3,7 @@ import mocha from 'gulp-mocha';
 import babel from 'gulp-babel';
 
 const dirs = {
-  src: 'src',
+  src: 'lib',
   test: 'test',
   dest: 'build'
 };
