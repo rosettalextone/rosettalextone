@@ -28,15 +28,13 @@ describe('Check unicode+ convertor', () => {
     ];
 
     describe('#detectChars()', () => {
-        (()=>{
-            types.map((type => {
-                it('returns instance of "Map", when param is "' + type + '"', () => {
-                    let value = detectChars(type);
-                    expect(value).not.to.be.an('undefined');
-                    expect(value).to.be.an.instanceof(Map);
-                });
-            }));
-        })();
+        types.map((type => {
+            it(`returns instance of "Map", when param is "${type}"`, () => {
+                let value = detectChars(type);
+                expect(value).not.to.be.an('undefined');
+                expect(value).to.be.an.instanceof(Map);
+            });
+        }));
 
         it('throw error on incorrect string', () => {
             let value = detectChars.bind("Incorrect type");
@@ -45,36 +43,86 @@ describe('Check unicode+ convertor', () => {
     });
 
     describe('#processSymbol()', () => {
-        describe('must return not NON_EXIST when param is number between 0x00 and 0xFF', () => {
-            it("just one symbol in first dictionary 'SPACE' should return 0x20", () => {
-                let dictionary = detectChars(types[0]);
-                let value = processSymbol(dictionary, 0x20);
+        it("returns just one symbol in first dictionary 'SPACE' should return 0x20", () => {
+            let dictionary = detectChars(types[0]);
+            let value = processSymbol(dictionary, 0x20);
 
-                expect(value).to.be.a('number');
-                expect(value).to.equal(0x20);
-            });
-
-            // (()=>{
-            //     types.map((type) => {
-            //         let dictionary = detectChars(type);
-
-            //         Array(0xFF).fill().map((_, i) => i + 1).map((i) => {
-            //             it(i + ' of ' + type + ' return correct number', () => {
-            //                 let value = processSymbol(dictionary, i);
-            //                 expect(value).to.be.a('number');
-            //                 // expect(value).to.not.equal(SymbolType.NotExist);
-            //             });
-            //         });
-            //     });
-            // })();
+            expect(value).to.be.a('number');
+            expect(value).to.equal(0x20);
         });
+
+        // describe.skip('check the return not SymbolType.NotExist when param is number between 0x00 and 0xFF', () => {
+            
+        //     let numArray = Array
+        //         .apply(null, Array(0xFF))
+        //         .map((_, i) => i + 1);
+
+
+        //     types.map((type) => {
+        //         let dictionary = detectChars(type);
+
+        //         numArray.map((i) => {
+        //             it(`0x${i.toString(16)} of ${type} returns correct number`, () => {
+        //                 let value = processSymbol(dictionary, i);
+        //                 expect(value).to.be.a('number');
+        //                 expect(value).to.not.equal(SymbolType.NotExist);
+        //             });
+        //         });
+        //     });
+
+        // });
     });
 
     describe('#processChunk()', () => {
+        it("throw error on empty object", () => {
+            let value = processChunk.bind(undefined);
+            expect(value).to.throw(Error);
+        });
 
+        it("throw error on incorrect object", () => {
+            let value = processChunk.bind({});
+            expect(value).to.throw(Error);
+        });
+
+        it("should return correct chunk with one symbol", () => {
+            let chunk = {
+                underline: false,
+                type: types[0],
+                symbols: [0x20]
+            };
+
+            let value = processChunk(chunk);
+            expect(value).not.to.be.an('undefined');
+            expect(value).to.deep.equal(chunk);
+        });
     });
 
     describe('#process()', () => {
+        it("throw error on empty object", () => {
+            let value = process.bind(undefined);
+            expect(value).to.throw(Error);
+        });
 
+        it("throw error on incorrect object", () => {
+            let value = process.bind({});
+            expect(value).to.throw(Error);
+        });
+
+        it("should return correct array with several chunks", () => {
+            let chunk = {
+                underline: false,
+                type: types[0],
+                symbols: [0x20, 0x20, 0x20]
+            };
+
+            let array = [];
+            array.push(chunk);
+            array.push(chunk);
+            array.push(chunk);
+
+            let value = process(array);
+            expect(value).not.to.be.an('undefined');
+            expect(value).to.deep.equal(array);
+        });
     });
 });
