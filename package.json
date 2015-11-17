@@ -14,7 +14,7 @@
   "repository": "rosettalextone/rosettalextone",
   "preferGlobal": true,
   "bin": {
-    "rosettalextone": "./bin/rosettalextone-cli.js"
+    "rosettalextone": "./bin/rosettalextone.js"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
