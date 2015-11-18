@@ -1,5 +1,1 @@
-[![Build Status](https://travis-ci.org/rosettalextone/rosettalextone.svg?branch=master)](https://travis-ci.org/rosettalextone/rosettalextone)
-
-[![Build Status](https://travis-ci.org/rosettalextone/rosettalextone.svg?branch=develop)](https://travis-ci.org/rosettalextone/rosettalextone)
-
-# Rosetta Lextone
+# Rosetta Lextone [![Build Status](https://travis-ci.org/rosettalextone/rosettalextone.svg?branch=master)](https://travis-ci.org/rosettalextone/rosettalextone) [![Build Status](https://travis-ci.org/rosettalextone/rosettalextone.svg?branch=develop)](https://travis-ci.org/rosettalextone/rosettalextone) [![Code Climate](https://codeclimate.com/github/rosettalextone/rosettalextone/badges/gpa.svg)](https://codeclimate.com/github/rosettalextone/rosettalextone) [![Test Coverage](https://codeclimate.com/github/rosettalextone/rosettalextone/badges/coverage.svg)](https://codeclimate.com/github/rosettalextone/rosettalextone/coverage)
