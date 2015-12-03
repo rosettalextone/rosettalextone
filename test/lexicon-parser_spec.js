@@ -45,7 +45,7 @@ describe('Lexicon parser', () => {
     
     });
     
-    describe('#parseLine()', () => {
+    describe.skip('#parseLine()', () => {
 
         it('should return array', () => {
             let byteArray = new Buffer("I'm a buffer");
