@@ -37,26 +37,26 @@ describe('Lexicon parser', () => {
 
     });
 
-    // describe('#divideByTrigger', () => {
-    //
-    //     it('divided lines by trigger byte', () => {
-    //
-    //     });
-    //
-    // });
-    //
-    describe('#parseString()', () => {
+    describe('#divideByTrigger', () => {
+    
+        it('divided lines by trigger byte', () => {
+    
+        });
+    
+    });
+    
+    describe('#parseLine()', () => {
 
         it('should return array', () => {
             let byteArray = new Buffer("I'm a buffer");
-            let value = parseString(byteArray);
+            let value = LexiconParser.parseLine(byteArray);
 
             expect(value).to.be.an('array');
         });
 
         it('should return array of specific objects', () => {
             let byteArray = new Buffer("I'm a buffer");
-            let value = parseString(byteArray);
+            let value = LexiconParser.parseLine(byteArray);
 
             value.map((item) => {
                 expect(item).to.be.an('object');
@@ -67,88 +67,88 @@ describe('Lexicon parser', () => {
         });
         
     });
-    //
-    // describe('#process()', () => {
-    //     it('should throw error with empty params', () => {
-    //         let value = process.bind(undefined);
-    //         expect(value).to.throw(Error);
-    //     });
-    //
-    //     it('should return array', () => {
-    //         let byteArray = new Buffer("I'm a buffer\nAnd I have some\nlines", "ascii");
-    //         let value = process(byteArray);
-    //
-    //         expect(value).to.be.an('array');
-    //     });
-    //
-    //     it('should return array with specific lenght', () => {
-    //         let byteArray = new Buffer("I'm a buffer\nAnd I have some\nlines", "ascii");
-    //         let value = process(byteArray);
-    //
-    //         expect(value.length).to.equal(3);
-    //     });
-    //
-    //     it('should return array of specific objects', () => {
-    //         let byteArray = new Buffer("I'm a buffer\nAnd I have some\nlines", "ascii");
-    //         let value = process(byteArray);
-    //
-    //         value.map((item) => {
-    //             expect(item).to.be.an('object');
-    //             expect(item.underlined).to.be.a('boolean');
-    //             expect(item.type).to.be.a('string');
-    //             expect(item.symbols).to.be.an('array');
-    //         });
-    //     });
-    //
-    //     it('should return correct array of specific objects (with CL+LF)', () => {
-    //         let byteArray = new Buffer([0x20, 0x20, Control.CL, Control.FL, 0x20, 0x20]);
-    //         let value = process(byteArray);
-    //
-    //         expect(value.length).to.equal(2);
-    //
-    //         expect(value[0].underlined).to.equal(false);
-    //         expect(value[0].type).to.equal("Normal");
-    //         expect(value[0].symbols[0]).to.equal(0x20);
-    //         expect(value[0].symbols[1]).to.equal(0x20);
-    //
-    //         expect(value[1].underlined).to.equal(false);
-    //         expect(value[1].type).to.equal("Normal");
-    //         expect(value[1].symbols[0]).to.equal(0x20);
-    //         expect(value[1].symbols[1]).to.equal(0x20);
-    //     });
-    //
-    //     it('should return correct array of specific objects (with CL)', () => {
-    //         let byteArray = new Buffer([0x20, 0x20, Control.CL, 0x20, 0x20]);
-    //         let value = process(byteArray);
-    //
-    //         expect(value.length).to.equal(2);
-    //
-    //         expect(value[0].underlined).to.equal(false);
-    //         expect(value[0].type).to.equal("Normal");
-    //         expect(value[0].symbols[0]).to.equal(0x20);
-    //         expect(value[0].symbols[1]).to.equal(0x20);
-    //
-    //         expect(value[1].underlined).to.equal(false);
-    //         expect(value[1].type).to.equal("Normal");
-    //         expect(value[1].symbols[0]).to.equal(0x20);
-    //         expect(value[1].symbols[1]).to.equal(0x20);
-    //     });
-    //
-    //     it('should return correct array of specific objects (with LF)', () => {
-    //         let byteArray = new Buffer([0x20, 0x20, Control.LF, 0x20, 0x20]);
-    //         let value = process(byteArray);
-    //
-    //         expect(value.length).to.equal(2);
-    //
-    //         expect(value[0].underlined).to.equal(false);
-    //         expect(value[0].type).to.equal("Normal");
-    //         expect(value[0].symbols[0]).to.equal(0x20);
-    //         expect(value[0].symbols[1]).to.equal(0x20);
-    //
-    //         expect(value[1].underlined).to.equal(false);
-    //         expect(value[1].type).to.equal("Normal");
-    //         expect(value[1].symbols[0]).to.equal(0x20);
-    //         expect(value[1].symbols[1]).to.equal(0x20);
-    //     });
-    // });
+    
+    describe.skip('#process()', () => {
+        it('should throw error with empty params', () => {
+            let value = LexiconParser.process.bind(undefined);
+            expect(value).to.throw(Error);
+        });
+    
+        it('should return array', () => {
+            let byteArray = new Buffer("I'm a buffer\nAnd I have some\nlines", "ascii");
+            let value = LexiconParser.process(byteArray);
+    
+            expect(value).to.be.an('array');
+        });
+    
+        it('should return array with specific lenght', () => {
+            let byteArray = new Buffer("I'm a buffer\nAnd I have some\nlines", "ascii");
+            let value = LexiconParser.process(byteArray);
+    
+            expect(value.length).to.equal(3);
+        });
+    
+        it('should return array of specific objects', () => {
+            let byteArray = new Buffer("I'm a buffer\nAnd I have some\nlines", "ascii");
+            let value = LexiconParser.process(byteArray);
+    
+            value.map((item) => {
+                expect(item).to.be.an('object');
+                expect(item.underlined).to.be.a('boolean');
+                expect(item.type).to.be.a('string');
+                expect(item.symbols).to.be.an('array');
+            });
+        });
+    
+        it('should return correct array of specific objects (with CL+LF)', () => {
+            let byteArray = new Buffer([0x20, 0x20, Control.CL, Control.FL, 0x20, 0x20]);
+            let value = LexiconParser.process(byteArray);
+    
+            expect(value.length).to.equal(2);
+    
+            expect(value[0].underlined).to.equal(false);
+            expect(value[0].type).to.equal("Normal");
+            expect(value[0].symbols[0]).to.equal(0x20);
+            expect(value[0].symbols[1]).to.equal(0x20);
+    
+            expect(value[1].underlined).to.equal(false);
+            expect(value[1].type).to.equal("Normal");
+            expect(value[1].symbols[0]).to.equal(0x20);
+            expect(value[1].symbols[1]).to.equal(0x20);
+        });
+    
+        it('should return correct array of specific objects (with CL)', () => {
+            let byteArray = new Buffer([0x20, 0x20, Control.CL, 0x20, 0x20]);
+            let value = LexiconParser.process(byteArray);
+    
+            expect(value.length).to.equal(2);
+    
+            expect(value[0].underlined).to.equal(false);
+            expect(value[0].type).to.equal("Normal");
+            expect(value[0].symbols[0]).to.equal(0x20);
+            expect(value[0].symbols[1]).to.equal(0x20);
+    
+            expect(value[1].underlined).to.equal(false);
+            expect(value[1].type).to.equal("Normal");
+            expect(value[1].symbols[0]).to.equal(0x20);
+            expect(value[1].symbols[1]).to.equal(0x20);
+        });
+    
+        it('should return correct array of specific objects (with LF)', () => {
+            let byteArray = new Buffer([0x20, 0x20, Control.LF, 0x20, 0x20]);
+            let value = LexiconParser.process(byteArray);
+    
+            expect(value.length).to.equal(2);
+    
+            expect(value[0].underlined).to.equal(false);
+            expect(value[0].type).to.equal("Normal");
+            expect(value[0].symbols[0]).to.equal(0x20);
+            expect(value[0].symbols[1]).to.equal(0x20);
+    
+            expect(value[1].underlined).to.equal(false);
+            expect(value[1].type).to.equal("Normal");
+            expect(value[1].symbols[0]).to.equal(0x20);
+            expect(value[1].symbols[1]).to.equal(0x20);
+        });
+    });
 });
